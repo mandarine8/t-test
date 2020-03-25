@@ -12,6 +12,21 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
 {% endblock %}
 
+{% block scripts %}
+  {{ super()}}
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+  <script>
+    var typed = new Typed('#typed', {
+      stringsElement: '#typed-strings',
+      loop: true,
+      typeSpeed: 40,
+      backSpeed: 20,
+      startDelay: 1000
+    });
+  </script>
+{% endblock %}
+
 <!-- Set the metadata -->
 {% block metas %}
   {{ super()}}

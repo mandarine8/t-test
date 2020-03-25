@@ -15,7 +15,9 @@
 <!-- Call the Js scripts -->
 {% block scripts %}
   {{ super()}}
+  <!-- Typed sentence Home Page -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  <!-- Confettis for success in Exercises -->
   <script src="{{ url_for('static', filename='confetti.min.js') }}"></script>
 {% endblock %}
 

@@ -64,3 +64,9 @@ li.h4{
   margin-top: 50px;
 }
 
+.confetti{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

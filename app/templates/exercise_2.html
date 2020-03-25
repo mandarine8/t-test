@@ -10,6 +10,11 @@
     <p>Slice every line at 10 character maximum</p>
   </div>
 
+<!-- Confetti if response -->
+  {% if response %}
+    <canvas id="my-canvas" class="confetti"></canvas>
+  {% endif %}
+
   <div class="col-md-4">
     <!-- Takes care of rendering the form -->
     {{ wtf.quick_form(form) }}
@@ -20,3 +25,15 @@
   </div>
 {% endblock %}
 
+<!-- Confettis in Js during 5seconds -->
+{% block scripts %}
+  {{ super()}}
+  <script>
+    var confettiSettings = { target: 'my-canvas' };
+    var confetti = new ConfettiGenerator(confettiSettings);
+    confetti.render();
+    setTimeout(() => {
+      confetti.clear();
+    }, 5000);
+  </script>
+{% endblock %}

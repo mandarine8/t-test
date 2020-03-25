@@ -16,3 +16,17 @@
     </div>
   </div>
 {% endblock %}
+
+<!-- Typed sentence in Js -->
+{% block scripts %}
+  {{ super()}}
+  <script>
+    var typed = new Typed('#typed', {
+      stringsElement: '#typed-strings',
+      loop: true,
+      typeSpeed: 40,
+      backSpeed: 20,
+      startDelay: 1000
+    });
+  </script>
+{% endblock %}
